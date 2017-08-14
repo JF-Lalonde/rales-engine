@@ -4,7 +4,7 @@ require 'CSV'
 
 namespace :populate do
   @filenames.each do |filename|
-    csv_text = File.read("/app/data/'#{filename}.csv'")
+    csv_text = File.read("/app/data/#{filename}.csv")
     csv = CSV.parse(csv_text, headers: true)
     csv.each do |row|
       (filename.camelize).create!(row.to_hash)
