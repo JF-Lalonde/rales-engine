@@ -1,14 +1,13 @@
 require 'CSV'
 
-@filenames = ["customers", "invoice_items", "invoices", "items", "merchants", "transactions"]
+@filenames = ["customer", "merchant", "invoice", "item", "invoice_item", "transaction"]
 
 desc "Populates the six CSV files into the database"
-task :populate do
+task :populate => :environment do
   @filenames.each do |filename|
-    csv_text = File.read("./app/data/#{filename}.csv")
-    csv = CSV.parse(csv_text, headers: true)
-    csv.each do |row|
+    CSV.foreach("./app/data/#{filename}s.csv", headers: true, header_converters: :symbol) do |row|
       (filename.camelize.constantize).create!(row.to_hash)
+      puts row
     end
   end
 end

@@ -1,10 +1,8 @@
 class CreateTransactions < ActiveRecord::Migration[5.1]
   def change
     create_table :transactions do |t|
-      t.references :customer, foreign_key: true
-      t.references :merchant, foreign_key: true
-      t.integer :invoice_id
-      t.integer :credit_card_number
+      t.references :invoice, foreign_key: true
+      t.string :credit_card_number
       t.datetime :credit_card_expiration_date
       t.string :result
 
