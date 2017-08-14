@@ -1,7 +1,7 @@
 class CreateTransactions < ActiveRecord::Migration[5.1]
   def change
     create_table :transactions do |t|
-      t.references :model, foreign_key: true
+      t.references :customer, foreign_key: true
       t.references :merchant, foreign_key: true
       t.integer :invoice_id
       t.integer :credit_card_number
