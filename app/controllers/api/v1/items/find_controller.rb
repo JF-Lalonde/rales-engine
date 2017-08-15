@@ -1,7 +1,7 @@
 class Api::V1::Items::FindController < ApplicationController
 
   def show
-    render json: Item.find_by(item_params)
+    render json: Item.where(item_params).first
   end
 
   private
