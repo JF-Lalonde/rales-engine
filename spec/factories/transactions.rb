@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :transaction do
-    model nil
-    merchant nil
+    association :customer, factory: :customer
+    association :merchant, factory: :merchant
   end
 end
