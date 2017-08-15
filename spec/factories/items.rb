@@ -3,6 +3,6 @@ FactoryGirl.define do
     name "MyString"
     description "MyText"
     unit_price 1
-    merchant ""
+    association :merchant, factory: :merchant 
   end
 end

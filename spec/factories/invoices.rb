@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :invoice do
+    association :customer, factory: :customer
+    association :merchant, factory: :merchant
     status "MyString"
-    customer
-    merchant
   end
 end
