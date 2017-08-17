@@ -7,6 +7,8 @@ Rails.application.routes.draw do
         get '/find', to: 'find#show'
         get '/find_all', to: 'find_all#index'
         get '/random', to: 'random#show'
+        get "/:id/best_day", to: "best#show"
+        get "/most_items", to: "most_items#index"
       end
 
       namespace :invoices do
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
         get "/find", to: "find#show"
         get "/find_all", to: "find#index"
         get "/random", to: "random#show"
+        get "/:id/favorite_merchant", to: "favorites#show"
       end
 
       namespace :merchants do
@@ -32,6 +35,7 @@ Rails.application.routes.draw do
         get "/find_all", to: "find#index"
         get "/random", to: "random#show"
         get "/:id/revenue", to: "revenue#show"
+        get "/most_items", to: "most_items#index"
       end
 
       namespace :transactions do
