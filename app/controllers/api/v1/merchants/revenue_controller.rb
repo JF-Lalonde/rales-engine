@@ -3,9 +3,7 @@ class Api::V1::Merchants::RevenueController < ApplicationController
     render json: Merchant.find(params[:id]).total_revenue(filter)
   end
 
-  private
-
-  def filter
-    {}
+  def index
+    render json: Merchant.all_revenue_by_date(params[:date])
   end
 end

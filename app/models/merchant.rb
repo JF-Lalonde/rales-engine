@@ -19,6 +19,7 @@ class Merchant < ApplicationRecord
       .order("sum(quantity) DESC")
       .group(:id)
       .limit(quantity)
+  end
 
   def favorite_customer
     self.customers
@@ -27,5 +28,12 @@ class Merchant < ApplicationRecord
       .group('customers.id')
       .order('count(customers.id) DESC')
       .first
+  end
+
+  def self.all_revenue_by_date(date)
+    joins(:invoice_items)
+      .merge(Invoice.paid)
+      .where(invoices: {created_at: date})
+      .sum('invoice_items.quantity * invoice_items.unit_price')
   end
 end

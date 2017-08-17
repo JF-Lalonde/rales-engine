@@ -237,11 +237,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        1,
         1,
         null,
         null,
@@ -257,6 +252,14 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -301,8 +304,8 @@
         null,
         1,
         null,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         null,
@@ -311,8 +314,8 @@
         null,
         1,
         null,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         null
@@ -373,10 +376,10 @@
         null,
         1,
         null,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -390,10 +393,10 @@
         null,
         1,
         null,
-        1,
-        1,
-        1,
-        6,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -406,10 +409,10 @@
         1,
         null,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null
@@ -423,8 +426,8 @@
         null,
         1,
         null,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         1,
@@ -432,8 +435,8 @@
         null,
         1,
         null,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         null
@@ -446,6 +449,8 @@
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/models/customer.rb": [
+        1,
+        1,
         1,
         null
       ],
@@ -465,6 +470,13 @@
         1,
         1,
         1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/spec/models/invoice_spec.rb": [
@@ -479,6 +491,13 @@
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/spec/models/item_spec.rb": [
@@ -491,6 +510,13 @@
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/models/item.rb": [
         1,
         1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/spec/models/merchant_spec.rb": [
@@ -502,6 +528,19 @@
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/models/merchant.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/spec/models/transaction_spec.rb": [
@@ -512,6 +551,9 @@
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/models/transaction.rb": [
+        1,
+        1,
+        null,
         1,
         1,
         null
@@ -677,7 +719,7 @@
         1,
         1,
         1,
-        1,
+        0,
         null,
         null,
         1,
@@ -767,7 +809,7 @@
         1,
         1,
         1,
-        1,
+        0,
         null,
         null,
         1,
@@ -810,6 +852,15 @@
         1,
         null
       ],
+      "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/serializers/invoice_item_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        3,
+        null,
+        null
+      ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/controllers/api/v1/invoice_items_controller.rb": [
         1,
         null,
@@ -830,6 +881,11 @@
         1,
         null,
         null,
+        null
+      ],
+      "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/serializers/invoice_serializer.rb": [
+        1,
+        1,
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/controllers/api/v1/invoices_controller.rb": [
@@ -858,6 +914,14 @@
         1,
         null,
         null,
+        null
+      ],
+      "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/serializers/item_serializer.rb": [
+        1,
+        1,
+        null,
+        1,
+        5,
         null,
         null
       ],
@@ -910,6 +974,11 @@
         null,
         null
       ],
+      "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/serializers/customer_serializer.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/controllers/api/v1/customers/find_controller.rb": [
         1,
         null,
@@ -944,6 +1013,11 @@
         1,
         1,
         null,
+        null
+      ],
+      "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/serializers/merchant_serializer.rb": [
+        1,
+        1,
         null
       ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/controllers/api/v1/merchants/find_controller.rb": [
@@ -982,6 +1056,11 @@
         null,
         null
       ],
+      "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/serializers/transaction_serializer.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/mossy/turing/3module/projects/rales_engine_2/rales-engine/app/controllers/api/v1/transactions/find_controller.rb": [
         1,
         null,
@@ -1008,6 +1087,6 @@
         null
       ]
     },
-    "timestamp": 1502835288
+    "timestamp": 1502996373
   }
 }
