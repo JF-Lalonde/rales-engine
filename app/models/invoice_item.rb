@@ -9,5 +9,4 @@ class InvoiceItem < ApplicationRecord
       .merge(Transaction.successful)
       .sum('quantity * unit_price')
   end
-
 end
