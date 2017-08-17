@@ -7,7 +7,7 @@ Rails.application.routes.draw do
         get '/find', to: 'find#show'
         get '/find_all', to: 'find_all#index'
         get '/random', to: 'random#show'
-        get '/most_revenue', to
+        get '/most_revenue', to: 'most_revenue#index'
       end
 
       namespace :invoices do
@@ -33,6 +33,8 @@ Rails.application.routes.draw do
         get "/find_all", to: "find#index"
         get "/random", to: "random#show"
         get "/:id/favorite_customer", to: "favorite_customer#show"
+        get "/:id/revenue", to: "revenue#show"
+
       end
 
       namespace :transactions do
