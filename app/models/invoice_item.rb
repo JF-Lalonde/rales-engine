@@ -4,8 +4,10 @@ class InvoiceItem < ApplicationRecord
 
   has_many :transactions, through: :invoice
 
-  def total
-    sum(self.quantity * self.unit_price)
+  def self.total
+    joins(:transactions)
+      .merge(Transaction.successful)
+      .sum('quantity * unit_price')
   end
 
 end

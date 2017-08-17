@@ -7,6 +7,9 @@ class Invoice < ApplicationRecord
 
   scope :paid, -> { joins(:transactions).merge(Transaction.successful) }
 
-
-
+  def self.total_revenue
+    joins(:invoice_items)
+      .merge(Invoice.paid)
+      .sum('invoice_items.quantity * invoice_items.unit_price')
+  end
 end
