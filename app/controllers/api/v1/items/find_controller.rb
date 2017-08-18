@@ -1,5 +1,6 @@
 class Api::V1::Items::FindController < ApplicationController
 
+  def show
     if params[:unit_price]
       render json: Item.find_by(params[:unit_price].sub!('.', '').to_i)
     else

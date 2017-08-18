@@ -4,6 +4,8 @@ class InvoiceItem < ApplicationRecord
 
   has_many :transactions, through: :invoice
 
+  scope :paid, -> { joins(:transactions).merge(Transaction.successful) }
+
   def self.total
     joins(:transactions)
       .merge(Transaction.successful)
