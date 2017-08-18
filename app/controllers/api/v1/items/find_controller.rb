@@ -1,6 +1,6 @@
 class Api::V1::Items::FindController < ApplicationController
 
-  # before_action :change_unit_price
+  before_action :change_unit_price
 
   def show
     render json: Item.where(item_params).first
@@ -13,11 +13,9 @@ class Api::V1::Items::FindController < ApplicationController
     :created_at, :updated_at)
   end
 
-  # def change_unit_price
-  #   if params == params[:unit_price]
-  #     byebug
-  #     (JSON.parse(params[:unit_price]).to_f).round(0)
-  #   end
-  # end
-
+  def change_unit_price
+    if params[:unit_price] != nil
+      params[:unit_price].to_f.round(0)
+    end
+  end
 end
