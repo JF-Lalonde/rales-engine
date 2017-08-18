@@ -36,28 +36,27 @@ RSpec.describe "Transactions API" do
   end
 
   it "can find one transaction by other params" do
-    created_at = create(:transaction).created_at
+    result = create(:transaction).result
 
-    get "/api/v1/transactions/find?created_at=#{created_at}"
+    get "/api/v1/transactions/find?result=#{result}"
 
     transaction = JSON.parse(response.body)
 
     expect(response).to be_success
-    expect(transaction["created_at"]).to eq(created_at)
+    expect(transaction["result"]).to eq(result)
   end
 
   it "can find many transactions by params" do
-    updated_at = create(:transaction).updated_at
-    create(:transaction)
+    create_list(:transaction, 2)
 
-    get "/api/v1/transactions/find_all?updated_at=#{updated_at}"
+    get "/api/v1/transactions/find_all?credit_card_number=8675309"
 
     transactions = JSON.parse(response.body)
 
     expect(response).to be_success
     expect(transactions).to be_a_kind_of(Array)
     expect(transactions.count).to eq(2)
-    expect(transactions[0]["updated_at"]).to eq(updated_at)
+    expect(transactions[0]["credit_card_number"]).to eq("8675309")
   end
 
   it "can find many transactions by params" do
