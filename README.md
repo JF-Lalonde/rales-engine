@@ -1,5 +1,5 @@
 # Rails Sales (aka Rales) Engine Project
-#### Created by Andrew Mossefin and JF Lalonde
+## Created by Andrew Mossefin and JF Lalonde
 
 ### Rales Engine is a revisiting of the business intelligence and relationships found in the Black Thursday project. This time around, CSVs are used to populate a database, and the analytics are performed using SQL/ActiveRecord.
 
