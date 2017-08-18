@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   has_many :invoice_items
   has_many :invoices, through: :invoice_items
   has_many :transactions, through: :invoice_items
-  
+
   def self.most_revenue(quantity)
     joins(:invoices)
       .merge(Invoice.paid)
@@ -11,7 +11,7 @@ class Item < ApplicationRecord
       .order('sum(invoice_items.quantity * invoice_items.unit_price) DESC')
       .limit(quantity)
   end
-  
+
   def best_day
     self.invoices
         .joins(:transactions, :invoice_items)
@@ -27,5 +27,6 @@ class Item < ApplicationRecord
       .where(invoices: { transactions: {result: "success"} })
       .order("sum(quantity) DESC")
       .group(:id)
+      .limit(quantity)
   end
 end

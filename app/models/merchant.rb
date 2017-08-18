@@ -9,8 +9,8 @@ class Merchant < ApplicationRecord
     self.invoices
         .joins(:transactions, :invoice_items)
         .where(transactions:{result: "success"})
-        .sum("unit_price * quantity")
         .where(filter)
+        .sum("unit_price * quantity")
   end
 
   def self.most_items(quantity=nil)
