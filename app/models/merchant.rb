@@ -5,11 +5,18 @@ class Merchant < ApplicationRecord
   has_many :invoice_items, through: :invoices
   has_many :customers, through: :invoices
 
-  def total_revenue(filter=nil)
+  def total_revenue
     self.invoices
         .joins(:transactions, :invoice_items)
         .where(transactions:{result: "success"})
-        .where(filter)
+        .sum("unit_price * quantity")
+  end
+
+  def revenue_by_date(date=nil)
+    self.invoices
+        .joins(:transactions, :invoice_items)
+        .where(transactions:{result: "success"})
+        .where(created_at: date)
         .sum("unit_price * quantity")
   end
 
